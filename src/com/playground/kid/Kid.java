@@ -1,15 +1,19 @@
-package com.carusel.kid;
+package com.playground.kid;
 
 public class Kid {
 	public int age;
 	public String name;
-	public int ticketNr;
+	public Ticket ticket;
 	
-	public Kid(int age, String name, int ticketNr) {
+	public Kid(){
+		
+	}
+	
+	public Kid(int age, String name, Ticket ticket) {
 		super();
 		this.age = age;
 		this.name = name;
-		this.ticketNr = ticketNr;
+		this.ticket = ticket;
 	}
 	public int getAge() {
 		return age;
@@ -23,10 +27,11 @@ public class Kid {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getTicketNr() {
-		return ticketNr;
+	public Ticket getTicket() {
+		return ticket;
 	}
-	public void setTicketNr(int ticketNr) {
-		this.ticketNr = ticketNr;
+	public void setTicket(Ticket ticket) {
+		this.ticket = ticket;
 	}
+	
 }
