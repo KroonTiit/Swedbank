@@ -4,6 +4,4 @@ import com.playground.Playsite;
 
 public class BallPit extends Playsite {
 	
-	
-	
 }

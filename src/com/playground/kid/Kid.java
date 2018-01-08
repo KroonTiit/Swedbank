@@ -1,14 +1,18 @@
 package com.playground.kid;
 
+import java.util.List;
+
+import com.playground.PlaygroundHistory;
+
 public class Kid {
 	public int age;
 	public String name;
 	public Ticket ticket;
+	public List<PlaygroundHistory> playsitesPlayed;
 	
 	public Kid(){
 		
 	}
-	
 	public Kid(int age, String name, Ticket ticket) {
 		super();
 		this.age = age;
@@ -33,5 +37,11 @@ public class Kid {
 	public void setTicket(Ticket ticket) {
 		this.ticket = ticket;
 	}
-	
+	public List<PlaygroundHistory> getPlaysitesPlayed() {
+		return playsitesPlayed;
+	}
+	public void setPlaysitesPlayed(Object playsite, int timePlayedInSeconds) {
+		PlaygroundHistory playedAt = new PlaygroundHistory(playsite, timePlayedInSeconds);
+		this.playsitesPlayed.add(playedAt);
+	}
 }
