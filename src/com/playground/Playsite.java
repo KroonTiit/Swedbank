@@ -15,6 +15,7 @@ public class Playsite {
 	public Playsite(){
 		
 	}
+	
 	public Playsite(int nrOfKidsAllowed) {
 		super();
 		this.nrOfKidsAllowed = nrOfKidsAllowed;
@@ -52,6 +53,12 @@ public class Playsite {
 			this.queue.remove(kid);
 	}
 	
+	/**
+	 * Used to add Kid to the playsite. When the playsites number of Kids allowed is reached the kid will be put into the queue. 
+	 * If the queue all ready exists but there is room on the playsite the first kid in the queue will be put on the paysite
+	 * and the new kid will be put at the back of the queu
+	 * @param Kid kid
+	 */
 	public void addKidToSite(Kid kid){
 		if(this.queue.isEmpty() && (kidsOnSite.size() < nrOfKidsAllowed)){
 			this.kidsOnSite.add(kid);
@@ -71,11 +78,13 @@ public class Playsite {
 	}
 	
 	public void removeKidFromSite(Kid kid){
-		if(!kidsOnSite.isEmpty()){
+		if(!this.kidsOnSite.isEmpty()){
 			this.kidsOnSite.remove(kid);			
 		}
 	}
-	
+	/**
+	 * Restructures the queue afther the first Kid has left, the queue so that the second kid becomes the first, the third second and so on.
+	 */
 	private void restuctureQueue(){
 		List<Kid> tempQueue = new ArrayList<Kid>();
 		for(int i = 0; i<this.queue.size()-1; i++){
@@ -83,7 +92,10 @@ public class Playsite {
 		}
 		this.queue=tempQueue;
 	}
-	
+	/**
+	 * Returns the % of the current utilisation of the playsite.
+	 * @return float
+	 */ 
 	public float getUtilisation() {
 		return ((float)this.kidsOnSite.size() / (float)this.nrOfKidsAllowed) * 100;
 	}
