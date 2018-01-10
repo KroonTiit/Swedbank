@@ -2,13 +2,13 @@ package com.playground.kid;
 
 import java.util.List;
 
-import com.playground.PlaygroundHistory;
+import com.playground.PlaysiteHistory;
 
 public class Kid {
 	public int age;
 	public String name;
 	public Ticket ticket;
-	public List<PlaygroundHistory> playsitesPlayed;
+	public List<PlaysiteHistory> playsitesPlayed;
 	
 	public Kid(){
 		
@@ -37,11 +37,11 @@ public class Kid {
 	public void setTicket(Ticket ticket) {
 		this.ticket = ticket;
 	}
-	public List<PlaygroundHistory> getPlaysitesPlayed() {
+	public List<PlaysiteHistory> getPlaysitesPlayed() {
 		return playsitesPlayed;
 	}
 	public void setPlaysitesPlayed(Object playsite, int timePlayedInSeconds) {
-		PlaygroundHistory playedAt = new PlaygroundHistory(playsite, timePlayedInSeconds);
+		PlaysiteHistory playedAt = new PlaysiteHistory(playsite, timePlayedInSeconds);
 		this.playsitesPlayed.add(playedAt);
 	}
 }

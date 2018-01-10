@@ -1,10 +1,10 @@
 package com.playground;
 
-public class PlaygroundHistory {
+public class PlaysiteHistory {
 	public Object playsite;
 	public int timePlayedInSeconds;
 	
-	public PlaygroundHistory(Object playsite, int timePlayedInSeconds) {
+	public PlaysiteHistory(Object playsite, int timePlayedInSeconds) {
 		super();
 		this.playsite = playsite;
 		this.timePlayedInSeconds = timePlayedInSeconds;
