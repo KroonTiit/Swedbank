@@ -92,7 +92,7 @@ public class Playsite {
 		return totalVisitors;
 	}
 	
-	public void setVisitorTotal(int visitorTotal) {
+	private void setVisitorTotal(int visitorTotal) {
 		this.totalVisitors = visitorTotal;
 	}
 }
